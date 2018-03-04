@@ -103,7 +103,6 @@ soup = BeautifulSoup(html, 'lxml')
 links = soup.find_all('a')
 for link in links:
     if 'CSV' in link.text:
-        print link.text
         if 'http' not in link['href']:
             url = 'https://www.tameside.gov.uk' + link['href']
         else:
